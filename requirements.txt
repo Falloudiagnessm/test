@@ -5,3 +5,4 @@ scipy
 folium
 pandas
 scipy
+streamlit-folium
