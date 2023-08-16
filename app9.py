@@ -5,7 +5,7 @@ from streamlit_folium import folium_static
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import odeint
+from scipy.integrate import odeintapp9
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -119,8 +119,8 @@ def model_diffusion(Initial1,Initial2,epsilon, r_1, r_2, K_R, alpha, beta_1, bet
     max_infection_zone1 = np.sum(u[:, 2])+np.sum(u[:, 3])+np.sum(u[:, 6])+np.sum(u[:, 7])
  
     max_infection_zone2 = np.sum(u[:, 10])+np.sum(u[:, 11])+np.sum(u[:, 14])+np.sum(u[:, 15])
-    st.write("Maximum d'infections dans la zone 1 :", max_infection_zone1)
-    st.write("Maximum d'infections dans la zone 1 :", max_infection_zone2)
+    #st.write("Maximum d'infections dans la zone 1 :", max_infection_zone1)
+    #st.write("Maximum d'infections dans la zone 2 :", max_infection_zone2)
 
 
     most_affected_zone = 1 if max_infection_zone2 > max_infection_zone1 else 2
@@ -185,8 +185,8 @@ def model_diffusion(Initial1,Initial2,epsilon, r_1, r_2, K_R, alpha, beta_1, bet
 
     
     # Couleurs en fonction de la zone la plus touchée
-    color_zone1 = 'red' if most_affected_zone == 1 else 'blue'
-    color_zone2 = 'blue' if most_affected_zone == 1 else 'red'
+    color_zone1 = 'blue' if most_affected_zone == 1 else 'red'
+    color_zone2 = 'red' if most_affected_zone == 1 else 'blue'
  
  
     # Initialiser la carte Folium
