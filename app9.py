@@ -49,7 +49,7 @@ def model_diffusion(Initial1,Initial2,epsilon, r_1, r_2, K_R, alpha, beta_1, bet
     #Initial = [500, 0, 50, 70, 10, 20, 60, 80, 0, 500, 0, 0, 0, 0, 0, 0]
 
     # Utilisez odeint pour résoudre les équations différentielles
-    u = odeint(hcv4, Initial, t, arg=(epsilon, r_1, r_2, K_R, alpha, beta_1, beta_2, beta_3, beta_4, d_1, d_2, gamma_1, gamma_2, delta_1, delta_2, ra_1, ra_2, K_A, d_F, a_12, a_21, b_12, b_21, r2_1, r2_2, K2_R, alpha2, beta2_1, beta2_2, beta2_3, beta2_4, d2_1, d2_2, gamma2_1, gamma2_2, delta2_1, delta2_2, ra2_1, ra2_2, K2_A, d2_F))
+    u = odeint(hcv4, Initial, t, args=(epsilon, r_1, r_2, K_R, alpha, beta_1, beta_2, beta_3, beta_4, d_1, d_2, gamma_1, gamma_2, delta_1, delta_2, ra_1, ra_2, K_A, d_F, a_12, a_21, b_12, b_21, r2_1, r2_2, K2_R, alpha2, beta2_1, beta2_2, beta2_3, beta2_4, d2_1, d2_2, gamma2_1, gamma2_2, delta2_1, delta2_2, ra2_1, ra2_2, K2_A, d2_F))
 
 
     
