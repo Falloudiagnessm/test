@@ -5,7 +5,7 @@ from streamlit_folium import folium_static
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.integrate import odeintapp9
+from scipy.integrate import odeint
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
