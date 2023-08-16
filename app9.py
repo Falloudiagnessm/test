@@ -266,7 +266,7 @@ def model_diffusion(Initial1,Initial2,epsilon, r_1, r_2, K_R, alpha, beta_1, bet
     else:
         st.write('veuillez choisir deux zones differentes')    
         
-          
+    st.write("la zone la plus iinfectée est colorée en rouge")      
   
 
 def main():
